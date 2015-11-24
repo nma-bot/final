@@ -2,12 +2,12 @@
 var opponentChoice = '';
 
 // Create variable for our button options
-var $options       = document.querySelectorAll('button');
+var $options = document.querySelectorAll('button');
 
 // Create variables to display results
-var userResult  = document.querySelectorAll('.user')[0];
-var oppResult   = document.querySelectorAll('.opponent')[0];
-var finalResult = document.querySelectorAll('.result')[0];
+var $userResult  = document.querySelectorAll('.user')[0];
+var $oppResult   = document.querySelectorAll('.opponent')[0];
+var $finalResult = document.querySelectorAll('.result')[0];
 
 // Create a random value between 1 - 100
 var rando    = Math.random() * 100;
@@ -63,13 +63,13 @@ function compareChoices(choice1, choice2) {
 // Listener for buttons to start challenge
 function startChallengeListener(e){
   // Get user choice from button data-* attribute 
-  // Remember, `e.target` is the element that was emitted the event
+  // Remember, `e.target` is the element that emitted the event
   var userChoice = e.target.getAttribute('data-option');
   
   // Set text content to choices and final result
-  userResult.textContent  = userChoice;
-  oppResult.textContent   = opponentChoice;
-  finalResult.textContent = compareChoices(userChoice, opponentChoice);
+  $userResult.textContent  = userChoice;
+  $oppResult.textContent   = opponentChoice;
+  $finalResult.textContent = compareChoices(userChoice, opponentChoice);
 }
 
 // Loop over buttons and add startChallengeListener to handlers

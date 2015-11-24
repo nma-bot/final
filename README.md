@@ -3,7 +3,7 @@ Final Project for [Interface Programming 2 course](https://github.com/kcc-nma-ar
 
 Based on what you've learned from [assignments week 11-13](https://github.com/kcc-nma-art258/assignments), choose one of the three JavaScript-based web apps to enhance using your knowledge of interactive design and development principles.
 
-Each web app will have it's own specific guidelines, requiring specific enhancements to be made to receive full credit on the project.
+Each web app will have it's own specific guidelines, requiring individual enhancements to be made to receive full credit for your final.
 
 ## Choose one of the following to redesign:
 
