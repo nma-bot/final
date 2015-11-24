@@ -14,6 +14,7 @@ The to-do list is the canonical beginners web application because it involves se
 - **User Experience/Usability Enhancements**
   - List input field should be placed above the list of items
   - New tasks should be added to the top of the list
+  - The input field should clear after adding a new item
   - Completed tasks should visually look _"complete"_
   - Users should be able to remove/delete a task from the list
 
