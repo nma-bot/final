@@ -45,6 +45,7 @@ While a simple game in real-life, rock-paper-scissors presents several challenge
 #### Specific Guidelines
 - **User Experience/Usability Enhancements**
   - Keep track of and display the score count (Wins-Ties-Wins) on the screen for the human and the computer player
+  - After completing the game once, the user should be able to start again
 
 #### Visual Design Resources
 - [Play The Rock Paper Scissors Game](http://www.playrps.com/) 
