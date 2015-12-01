@@ -1,16 +1,9 @@
 // Create variables for our form and list
 var form = document.querySelectorAll('.new-item-form')[0];
 var list = document.querySelectorAll('.list')[0];
+var savedList = JSON.parse(localStorage.getItem('list')) || [];
 
-// Create listener for form submissions
-function formListener(e){
-  // Prevent the form from submitting by default
-  e.preventDefault();
-  
-  // Get the value from the form input
-  // using the input's name attribute
-  var value = form['new-item-input'].value;
-
+function addToList(value){
   // Create new li element to insert in list
   var item = document.createElement('li');
   item.setAttribute('class', 'item');
@@ -30,8 +23,30 @@ function formListener(e){
   item.appendChild(title);
 
   // Add li element to list
-  list.appendChild(item);
+  list.insertBefore(item, list.firstChild);
+}
+
+// Create listener for form submissions
+function formListener(e){
+  // Prevent the form from submitting by default
+  e.preventDefault();
+  
+  // Get the value from the form input
+  // using the input's name attribute
+  var value = form['new-item-input'].value;
+  
+  addToList(value);
+  
+  form['new-item-input'].value = '';
+
+  savedList.push(value);
+
+  localStorage.setItem( 'list', JSON.stringify(savedList) );
 }
 
 // Add an event listener for form submit events
 form.addEventListener('submit', formListener);
+
+for (var i = 0; i < savedList.length; i++){
+  addToList(savedList[i]);
+}
